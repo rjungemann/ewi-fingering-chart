@@ -1,0 +1,68 @@
+#notes {
+  position: absolute;
+  top: 20px;
+  left: 240px;
+  font-family: sans-serif;
+}
+
+#info {
+  position: absolute;
+  top: 20px;
+  left: 440px;
+  font-family: sans-serif;
+}
+
+#info.error {
+  color: red;
+}
+
+#note {
+  font-size: 48px;
+}
+
+circle,
+rect {
+  stroke: black;
+  stroke-width: 3px;
+  fill: white;
+}
+
+#oct4,
+#oct3,
+#oct2,
+#oct1 {
+  display: none;
+}
+
+circle:hover,
+rect:hover {
+  fill: #ccc;
+}
+
+circle.selected,
+rect.selected {
+  fill: #666;
+}
+
+#middle-c,
+#middle-c-sharp,
+#high-staff-1,
+#high-staff-2,
+#high-staff-3,
+#high-staff-4,
+#high-staff-5,
+#high-staff-6,
+#high-staff-7,
+#high-staff-8,
+#low-staff-1,
+#low-staff-2,
+#low-staff-3,
+#low-staff-4,
+#low-staff-5,
+#low-staff-6,
+#low-staff-7,
+#low-staff-8,
+#low-staff-9 {
+  display: none;
+}
+
