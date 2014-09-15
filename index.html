@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+
+  <body>
+    <style>
+      #info {
+        position: absolute;
+        top: 20px;
+        left: 300px;
+        font-family: sans-serif;
+      }
+
+      #info.error {
+        color: red;
+      }
+
+      #note {
+        font-size: 48px;
+      }
+    </style>
+
+    <svg version="1.1" width="320" height="1190" id="svg2" sodipodi:version="0.32" inkscape:version="0.46" sodipodi:docname="akaiewi.svg" inkscape:output_extension="org.inkscape.output.svg.inkscape" class="thickness-thick">
+      <style>
+        path {
+          stroke: black;
+          stroke-width: 2px;
+          fill: white;
+        }
+
+        #oct4,
+        #oct3,
+        #oct2,
+        #oct1 {
+          display: none;
+        }
+
+        path:hover {
+          fill: #ccc;
+        }
+
+        path.selected {
+          fill: #666;
+        }
+      </style>
+
+      <preset id="default" name="EWI 4000s">{"octave": "asneeded"}</preset>
+      <preset id="usb" name="EWI USB">{"octave": "asneeded", "oct4": "never", "oct3": "never", "oct2": "never", "oct1": "never"}</preset>
+      <g id="allkeys" transform="scale(2) " class="">
+        <g id="octave" name="Octave rollers" class="asneeded">
+          <path name="Octave roller 8" d="M 12.999774,21.445836 L 35.000227,21.445836 C 37.216272,21.445836 39.000309,23.228698 39.000309,25.443284 L 39.000309,37.43563 C 39.000309,39.650216 37.216272,41.433078 35.000227,41.433078 L 12.999774,41.433078 C 10.783728,41.433078 8.9996912,39.650216 8.9996912,37.43563 L 8.9996912,25.443284 C 8.9996912,23.228698 10.783728,21.445836 12.999774,21.445836 z" id="oct8" class=""></path>
+          <path name="Octave roller 7" d="M 12.999774,41.445835 L 35.000227,41.445835 C 37.216272,41.445835 39.000309,43.228697 39.000309,45.443283 L 39.000309,57.435629 C 39.000309,59.650215 37.216272,61.433077 35.000227,61.433077 L 12.999774,61.433077 C 10.783728,61.433077 8.9996912,59.650215 8.9996912,57.435629 L 8.9996912,45.443283 C 8.9996912,43.228697 10.783728,41.445835 12.999774,41.445835 z" id="oct7" class=""></path>
+          <path name="Octave roller 6" d="M 12.990632,61.96999 L 35.009374,61.96999 C 37.227262,61.96999 39.012781,63.707209 39.012781,65.865101 L 39.012781,77.550434 C 39.012781,79.708326 37.227262,81.445545 35.009374,81.445545 L 12.990632,81.445545 C 10.772744,81.445545 8.9872248,79.708326 8.9872248,77.550434 L 8.9872248,65.865101 C 8.9872248,63.707209 10.772744,61.96999 12.990632,61.96999 z" id="oct6" class=""></path>
+          <path name="Octave roller 5" d="M 12.999774,81.445839 L 35.000227,81.445839 C 37.216272,81.445839 39.000309,83.228699 39.000309,85.443284 L 39.000309,97.435619 C 39.000309,99.650203 37.216272,101.43306 35.000227,101.43306 L 12.999774,101.43306 C 10.783728,101.43306 8.9996912,99.650203 8.9996912,97.435619 L 8.9996912,85.443284 C 8.9996912,83.228699 10.783728,81.445839 12.999774,81.445839 z" id="oct5" class=""></path>
+          <path name="Octave roller 4" d="M 13.000258,101.43311 L 34.999767,101.43311 C 37.215718,101.43311 38.999678,103.21835 38.999678,105.43588 L 38.999678,117.44418 C 38.999678,119.66172 37.215718,121.44695 34.999767,121.44695 L 13.000258,121.44695 C 10.784308,121.44695 9.0003474,119.66172 9.0003474,117.44418 L 9.0003474,105.43588 C 9.0003474,103.21835 10.784308,101.43311 13.000258,101.43311 z" id="oct4" class="never"></path>
+          <path name="Octave roller 3" d="M 13.000258,121.43311 L 34.999767,121.43311 C 37.215718,121.43311 38.999678,123.21835 38.999678,125.43588 L 38.999678,137.44418 C 38.999678,139.66172 37.215718,141.44695 34.999767,141.44695 L 13.000258,141.44695 C 10.784308,141.44695 9.0003474,139.66172 9.0003474,137.44418 L 9.0003474,125.43588 C 9.0003474,123.21835 10.784308,121.43311 13.000258,121.43311 z" id="oct3" class="never"></path>
+          <path name="Octave roller 2" d="M 13.000258,141.43311 L 34.999767,141.43311 C 37.215718,141.43311 38.999678,143.21834 38.999678,145.43587 L 38.999678,157.44418 C 38.999678,159.66171 37.215718,161.44695 34.999767,161.44695 L 13.000258,161.44695 C 10.784308,161.44695 9.0003474,159.66171 9.0003474,157.44418 L 9.0003474,145.43587 C 9.0003474,143.21834 10.784308,141.43311 13.000258,141.43311 z" id="oct2" class="never"></path>
+          <path name="Octave roller 1" d="M 13.000258,161.43311 L 34.999767,161.43311 C 37.215718,161.43311 38.999678,163.21834 38.999678,165.43587 L 38.999678,177.44418 C 38.999678,179.66171 37.215718,181.44695 34.999767,181.44695 L 13.000258,181.44695 C 10.784308,181.44695 9.0003474,179.66171 9.0003474,177.44418 L 9.0003474,165.43587 C 9.0003474,163.21834 10.784308,161.43311 13.000258,161.43311 z" id="oct1" class="never"></path>
+        </g>
+        <path name="Left first finger" id="l1" d="M 95.856234,49 C 107.43729,49 116.85623,39.58106 116.85623,28 C 116.85623,16.41894 107.43729,7 95.856234,7 C 84.275174,7 74.856234,16.41894 74.856234,28 C 74.856234,39.58106 84.275174,49 95.856234,49 z" class=""></path>
+        <path name="Bis key" id="bis" d="M 104.06837,69.61814 C 113.00841,67.98276 123.00841,65.48276 124.29452,61.43274 C 124.90185,57.38622 122.2719,53.24734 116.20405,54.88442 C 102.86674,62.29678 88.944224,61.21206 75.508414,54.88442 C 69.440564,53.24734 66.810614,57.38622 67.417944,61.43274 C 68.704054,65.48276 78.704054,67.98276 87.644094,69.61814 C 93.076994,70.62682 98.619224,70.32573 104.06837,69.61814 z" class=""></path>
+        <path name="Left second finger" id="l2" d="M 95.856234,122.11217 C 107.43729,122.11217 116.85623,112.69323 116.85623,101.11217 C 116.85623,89.53111 107.43729,80.11217 95.856234,80.11217 C 84.275174,80.11217 74.856234,89.53111 74.856234,101.11217 C 74.856234,112.69323 84.275174,122.11217 95.856234,122.11217 z" class=""></path>
+        <path name="Left third finger" id="l3" d="M 95.856234,182.11216 C 107.43729,182.11216 116.85623,172.69322 116.85623,161.11216 C 116.85623,149.5311 107.43729,140.11216 95.856234,140.11216 C 84.275174,140.11216 74.856234,149.5311 74.856234,161.11216 C 74.856234,172.69322 84.275174,182.11216 95.856234,182.11216 z" class=""></path>
+        <path name="Left little finger 1" id="lpinky1" d="M 84.330714,208.4849 C 84.330714,212.72754 90.088074,218.4849 94.330714,218.4849 C 119.33071,218.4849 108.33071,218.4849 133.33071,213.4849 C 135.41083,213.06888 138.33071,210.60622 138.33071,208.4849 C 138.33071,206.36358 135.41083,203.90092 133.33071,203.4849 C 108.33071,198.4849 119.33071,198.4849 94.330714,198.4849 C 90.088074,198.4849 84.330714,204.24226 84.330714,208.4849 z" class=""></path>
+        <path name="Left little finger 2" id="lpinky2" d="M 84.330714,240.68534 C 84.330714,244.92798 90.088074,250.68534 94.330714,250.68534 C 119.33071,250.68534 124.33071,250.68534 149.33071,245.68534 C 151.41083,245.26932 154.33071,242.80666 154.33071,240.68534 C 154.33071,238.56402 151.41083,236.10136 149.33071,235.68534 C 124.33071,230.68534 119.33071,230.68534 94.330714,230.68534 C 90.088074,230.68534 84.330714,236.4427 84.330714,240.68534 z" class=""></path>
+        <path d="M 45.388815,270.08405 L 139.63124,270.08405" id="separator" name="Separator" class=""></path>
+        <path name="Right side key" id="rside" d="M 109,299.48276 C 109,303.7254 103.24264,309.48276 99.000004,309.48276 C 74.000004,309.48276 85.000004,309.48276 60.000004,304.48276 C 57.919884,304.06674 55.000004,301.60408 55.000004,299.48276 C 55.000004,297.36144 57.919884,294.89878 60.000004,294.48276 C 85.000004,289.48276 74.000004,289.48276 99.000004,289.48276 C 103.24264,289.48276 109,295.24012 109,299.48276 z" class=""></path>
+        <path name="Right first finger" id="r1" d="M 95.856234,367.60118 C 107.43729,367.60118 116.85623,358.18224 116.85623,346.60117 C 116.85623,335.02011 107.43729,325.60117 95.856234,325.60117 C 84.275174,325.60117 74.856234,335.02011 74.856234,346.60117 C 74.856234,358.18224 84.275174,367.60118 95.856234,367.60118 z" class=""></path>
+        <path name="Right second finger" id="r2" d="M 95.856234,428.71337 C 107.43729,428.71337 116.85623,419.29443 116.85623,407.71337 C 116.85623,396.13231 107.43729,386.71337 95.856234,386.71337 C 84.275174,386.71337 74.856234,396.13231 74.856234,407.71337 C 74.856234,419.29443 84.275174,428.71337 95.856234,428.71337 z" class=""></path>
+        <path name="Right third finger" id="r3" d="M 95.856234,488.11218 C 107.43729,488.11218 116.85623,478.69324 116.85623,467.11218 C 116.85623,455.53112 107.43729,446.11218 95.856234,446.11218 C 84.275174,446.11218 74.856234,455.53112 74.856234,467.11218 C 74.856234,478.69324 84.275174,488.11218 95.856234,488.11218 z" class=""></path>
+        <path name="Right little finger 1" id="rpinky1" d="M 111,513.48276 C 111,517.7254 105.24264,523.48276 101,523.48276 C 76.000004,523.48276 87.000004,523.48276 62.000004,518.48276 C 59.919884,518.06674 57.000004,515.60408 57.000004,513.48276 C 57.000004,511.36144 59.919884,508.89878 62.000004,508.48276 C 87.000004,503.48276 76.000004,503.48276 101,503.48276 C 105.24264,503.48276 111,509.24012 111,513.48276 z" class=""></path>
+        <path name="Right little finger 2" id="rpinky2" d="M 111,545.68321 C 111,549.92585 105.24264,555.68321 101,555.68321 C 76.000004,555.68321 71.000004,555.68321 46.000004,550.68321 C 43.919884,550.26719 41.000004,547.80453 41.000004,545.68321 C 41.000004,543.56189 43.919884,541.09923 46.000004,540.68321 C 71.000004,535.68321 76.000004,535.68321 101,535.68321 C 105.24264,535.68321 111,541.44057 111,545.68321 z" class=""></path>
+        <path name="Right little finger 3" id="rpinky3" d="M 111,577.48276 C 111,581.7254 105.24264,587.48276 101,587.48276 C 76.000004,587.48276 55.000004,587.48276 30.000004,582.48276 C 27.919884,582.06674 25.000004,579.60408 25.000004,577.48276 C 25.000004,575.36144 27.919884,572.89878 30.000004,572.48276 C 55.000004,567.48276 76.000004,567.48276 101,567.48276 C 105.24264,567.48276 111,573.24012 111,577.48276 z" class=""></path>
+      </g>
+    </svg>
+
+    <div id="info">
+      <div id="note"></div>
+      <div id="error"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+
+    <script>
+      var notes = {
+        21: 'A0',
+        22: 'A#0',
+        23: 'B0',
+        24: 'C1',
+        25: 'C#1',
+        26: 'D1',
+        27: 'D#1',
+        28: 'E1',
+        29: 'F1',
+        30: 'F#1',
+        31: 'G1',
+        32: 'G#1',
+        33: 'A1',
+        34: 'A#1',
+        35: 'B1',
+        36: 'C2',
+        37: 'C#2',
+        38: 'D2',
+        39: 'D#2',
+        40: 'E2',
+        41: 'F2',
+        42: 'F#2',
+        43: 'G2',
+        44: 'G#2',
+        45: 'A2',
+        46: 'A#2',
+        47: 'B2',
+        48: 'C3',
+        49: 'C#3',
+        50: 'D3',
+        51: 'D#3',
+        52: 'E3',
+        53: 'F3',
+        54: 'F#3',
+        55: 'G3',
+        56: 'G#3',
+        57: 'A3',
+        58: 'A#3',
+        59: 'B3',
+        60: 'C4',
+        61: 'C#4',
+        62: 'D4',
+        63: 'D#4',
+        64: 'E4',
+        65: 'F4',
+        66: 'F#4',
+        67: 'G4',
+        68: 'G#4',
+        69: 'A4',
+        70: 'A#4',
+        71: 'B4',
+        72: 'C5',
+        73: 'C#5',
+        74: 'D5',
+        75: 'D#5',
+        76: 'E5',
+        77: 'F5',
+        78: 'F#5',
+        79: 'G5',
+        80: 'G#5',
+        81: 'A5',
+        82: 'A#5',
+        83: 'B5',
+        84: 'C6',
+        85: 'C#6',
+        86: 'D6',
+        87: 'D#6',
+        88: 'E6',
+        89: 'F6',
+        90: 'F#6',
+        91: 'G6',
+        92: 'G#6',
+        93: 'A6',
+        94: 'A#6',
+        95: 'B6',
+        96: 'C7',
+        97: 'C#7',
+        98: 'D7',
+        99: 'D#7',
+        100: 'E7',
+        101: 'F7',
+        102: 'F#7',
+        103: 'G7',
+        104: 'G#7',
+        105: 'A7',
+        106: 'A#7',
+        107: 'B7',
+        108: 'C8',
+      }
+
+      function FingeringError(message) {
+        this.message = message;
+        this.stack = Error().stack;
+      }
+
+      FingeringError.prototype = Object.create(Error.prototype);
+      FingeringError.prototype.name = "FingeringError";
+
+      $.fn.svgFunctions = {
+        addClass: function (className) {
+          $(this).attr('class', function(index, classNames) {
+            return classNames + ' ' + className;
+          });
+        },
+
+        removeClass: function (className) {
+          $(this).attr('class', function(index, classNames) {
+            return classNames.replace(className, '');
+          });
+        },
+
+        hasClass: function (className) {
+          return $(this).attr('class').indexOf(className) !== -1;
+        },
+
+        toggleClass: function (className, condition) {
+          if (condition !== undefined && condition !== null) {
+            if (condition) {
+              $(this).svg('addClass', className);
+            } else {
+              $(this).svg('removeClass', className);
+            }
+
+            return;
+          }
+
+          if ($(this).svg('hasClass', className)) {
+            $(this).svg('removeClass', className);
+          } else {
+            $(this).svg('addClass', className);
+          }
+        }
+      };
+
+      $.fn.svg = function () {
+        var args = Array.prototype.slice.call(arguments);
+        var method = args[0];
+        var otherArgs = args.slice(1, arguments.length);
+
+        return $.fn.svgFunctions[method].apply(this, otherArgs);
+      };
+
+      $('path').on('click', function () {
+        $(this).svg('toggleClass', 'selected');
+
+        update();
+      });
+
+      function verifyOctaves(ids) {
+        var octIds = _.intersection(ids, 'oct5 oct6 oct7 oct8'.split(' '));
+
+        if (octIds.length === 0) {
+          throw new FingeringError('At least one octave button must be pressed.');
+        }
+
+        if (octIds.length > 2) {
+          throw new FingeringError('At most two octave buttons can be pressed.');
+        }
+
+        if (
+          (octIds[0] === 'oct5' && octIds[1] === 'oct7') ||
+          (octIds[0] === 'oct5' && octIds[1] === 'oct8') ||
+          (octIds[0] === 'oct6' && octIds[1] === 'oct8')
+        ) {
+          throw new FingeringError('Pressed octave buttons must be adjacent');
+        }
+
+        if (
+          octIds.length === 1 && octIds[0] === 'oct6' ||
+          octIds.length === 1 && octIds[0] === 'oct7'
+        ) {
+          throw new FingeringError('Middle octave buttons cannot be pressed on their own');
+        }
+      }
+
+      function fetchOctaveOffset(ids) {
+        var octIds = _.intersection(ids, 'oct5 oct6 oct7 oct8'.split(' '));
+
+        if (octIds.length === 1 && octIds[0] === 'oct5') {
+          return -2;
+        }
+
+        if (octIds[0] === 'oct5' && octIds[1] === 'oct6') {
+          return -1;
+        }
+
+        if (octIds[0] === 'oct6' && octIds[1] === 'oct7') {
+          return 0;
+        }
+
+        if (octIds[0] === 'oct7' && octIds[1] === 'oct8') {
+          return 1;
+        }
+
+        if (octIds[0] === 'oct8') {
+          return 2;
+        }
+      }
+
+      function calculateNoteWithoutOctave(baseNote, ids) {
+        var newBaseNote = baseNote;
+
+        if (_.contains(ids, 'l1')) {
+          newBaseNote += -2;
+        }
+
+        if (_.contains(ids, 'bis')) {
+          if (_.contains(ids, 'l1') && _.contains(ids, 'l2')) {
+            // Do nothing...
+          } else {
+            newBaseNote += -1;
+          }
+        }
+
+        if (_.contains(ids, 'l2')) {
+          if (_.contains(ids, 'l1')) {
+            newBaseNote += -2;
+          } else {
+            newBaseNote += -1;
+          }
+        }
+
+        if (_.contains(ids, 'l3')) {
+          newBaseNote += -2;
+        }
+
+        if (_.contains(ids, 'lpinky1')) {
+          newBaseNote += 1;
+        }
+
+        if (_.contains(ids, 'lpinky2')) {
+          newBaseNote += -1;
+        }
+
+        if (_.contains(ids, 'rside')) {
+          if (_.contains(ids, 'lpinky1')) {
+            // Do nothing...
+          } else {
+            newBaseNote += 1;
+          }
+        }
+
+        if (_.contains(ids, 'r1')) {
+          if (_.contains(ids, 'l3')) {
+            newBaseNote += -2;
+          } else {
+            newBaseNote += -1;
+          }
+        }
+
+        if (_.contains(ids, 'r2')) {
+          newBaseNote += -1;
+        }
+
+        if (_.contains(ids, 'r3')) {
+          newBaseNote += -2;
+        }
+
+        if (_.contains(ids, 'rpinky1')) {
+          newBaseNote += 1;
+        }
+
+        if (_.contains(ids, 'rpinky2')) {
+          newBaseNote += -1;
+        }
+
+        if (_.contains(ids, 'rpinky3')) {
+          newBaseNote += -2;
+        }
+
+        return newBaseNote;
+      }
+
+      function update () {
+        var ids = _.chain($('.selected'))
+          .map(function (el) {
+            return $(el).attr('id');
+          })
+          .sort()
+          .value();
+
+        var baseNote = 73; // C#5, or C# above middle C
+        var newBaseNote = baseNote;
+        var octaveOffset = 0;
+        var newNote = 0;
+        var stringNote = 'C#5';
+
+        try {
+          verifyOctaves(ids);
+
+          octaveOffset = fetchOctaveOffset(ids);
+          newBaseNote = calculateNoteWithoutOctave(baseNote, ids);
+          newNote = newBaseNote + octaveOffset * 12;
+          stringNote = notes[newNote];
+
+          $('#note').text(stringNote);
+          $('#error').text('');
+          $('#info').removeClass('error');
+
+        } catch (e) {
+          if (e instanceof FingeringError) {
+            console.log(e.message);
+          }
+
+          $('#note').text('?');
+          $('#error').text(e.message);
+          $('#info').addClass('error');
+        }
+      }
+
+      function setup () {
+        $('#oct6, #oct7').svg('addClass', 'selected');
+        update();
+      }
+    </script>
+  </body>
+</html>
