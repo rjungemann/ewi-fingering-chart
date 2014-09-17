@@ -66,3 +66,7 @@ rect.selected {
   display: none;
 }
 
+.invisible {
+  display: none;
+}
+

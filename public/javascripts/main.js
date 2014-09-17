@@ -89,6 +89,133 @@ var notes = {
   108: 'C8',
 }
 
+// TODO: Sharp sign disappearing!
+function moveNote (offsetY, isSharp, countStavesAbove, countStavesBelow) {
+  var regex = /[\d\-\.]+/g;
+  var transform = $('#high-c').attr('transform');
+  var match = transform.match(regex);
+  var x = parseFloat(match[0]);
+  var y = 159 + offsetY;
+  var newTransform = 'translate(' + x + ', ' + y + ') rotate(-25.000000) translate(-89.000000, -159.000000) ';
+
+  $('#high-c').attr('transform', newTransform);
+  $('#high-c-sharp').attr('transform', 'translate(0, ' + offsetY + ')');
+  $('#high-c-sharp').svg('toggleClass', 'invisible', !isSharp);
+
+  for (var i = 0; i < 8; i++) {
+    $('#high-staff-' + (i + 1).toString()).css('display', 'none');
+  }
+
+  if (!isNaN(countStavesAbove) && countStavesAbove <= 8) {
+    for (var i = 0; i < countStavesAbove; i++) {
+      $('#high-staff-' + (i + 1).toString()).css('display', 'inline');
+    }
+  }
+
+  for (var i = 0; i < 9; i++) {
+    $('#low-staff-' + (i + 1).toString()).css('display', 'none');
+  }
+
+  if (!isNaN(countStavesBelow) && countStavesBelow <= 9) {
+    for (var i = 0; i < countStavesBelow; i++) {
+      $('#low-staff-' + (i + 1).toString()).css('display', 'inline');
+    }
+  }
+}
+
+var staffNotes = {
+  65: function () {
+    moveNote(28.5, false, 0, 0);
+  },
+  66: function () {
+    moveNote(28.5, true, 0, 0);
+  },
+  67: function () {
+    moveNote(21.5, false, 0, 0);
+  },
+  68: function () {
+    moveNote(21.5, true, 0, 0);
+  },
+  69: function () {
+    moveNote(14.5, false, 0, 0);
+  },
+  70: function () {
+    moveNote(14.5, true, 0, 0);
+  },
+  71: function () {
+    moveNote(7, false, 0, 0);
+  },
+  72: function () {
+    moveNote(0, false, 0, 0);
+  },
+  73: function () {
+    moveNote(0, true, 0, 0);
+  },
+  74: function () {
+    moveNote(-7.5, false, 0, 0);
+  },
+  75: function () {
+    moveNote(-7.5, true, 0, 0);
+  },
+  76: function () {
+    moveNote(-15, false, 0, 0);
+  },
+  77: function () {
+    moveNote(-22.5, false, 0, 0);
+  },
+  78: function () {
+    moveNote(-22.5, true, 0, 0);
+  },
+  79: function () {
+    moveNote(-29, false, 0, 0);
+  },
+  80: function () {
+    moveNote(-29, true, 0, 0);
+  },
+  81: function () {
+    moveNote(-36.5, false, 1, 0);
+  },
+  82: function () {
+    moveNote(-36.5, true, 1, 0);
+  },
+  83: function () {
+    moveNote(-44, false, 1, 0);
+  },
+  84: function () {
+    moveNote(-44, true, 1, 0);
+  },
+  85: function () {
+    moveNote(-52, false, 2, 0);
+  },
+  86: function () {
+    moveNote(-52, true, 2, 0);
+  },
+  87: function () {
+    moveNote(-59.5, false, 2, 0);
+  },
+  88: function () {
+    moveNote(-67.5, false, 3, 0);
+  },
+  89: function () {
+    moveNote(-74.5, false, 3, 0);
+  },
+  90: function () {
+    moveNote(-74.5, true, 3, 0);
+  },
+  91: function () {
+    moveNote(-82, false, 4, 0);
+  },
+  92: function () {
+    moveNote(-82, true, 4, 0);
+  },
+  93: function () {
+    moveNote(-89.5, false, 4, 0);
+  },
+};
+
+window.moveNote = moveNote;
+window.staffNotes = staffNotes;
+
 function FingeringError(message) {
   this.message = message;
   this.stack = Error().stack;
@@ -100,12 +227,20 @@ FingeringError.prototype.name = "FingeringError";
 $.fn.svgFunctions = {
   addClass: function (className) {
     $(this).attr('class', function(index, classNames) {
+      if (classNames === null || classNames === undefined) {
+        return className;
+      }
+
       return classNames + ' ' + className;
     });
   },
 
   removeClass: function (className) {
     $(this).attr('class', function(index, classNames) {
+      if (classNames === null || classNames === undefined) {
+        return '';
+      }
+
       return classNames.replace(className, '');
     });
   },
@@ -287,6 +422,10 @@ function update () {
     newBaseNote = calculateNoteWithoutOctave(baseNote, ids);
     newNote = newBaseNote + octaveOffset * 12;
     stringNote = notes[newNote];
+
+    if (staffNotes[newNote]) {
+      staffNotes[newNote]();
+    }
 
     $('#note').text(stringNote);
     $('#error').text('');
