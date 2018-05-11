@@ -89,7 +89,6 @@ var notes = {
   108: 'C8',
 }
 
-// TODO: Sharp sign disappearing!
 function moveNote (offsetY, isSharp, countStavesAbove, countStavesBelow) {
   var regex = /[\d\-\.]+/g;
   var transform = $('#high-c').attr('transform');
@@ -100,7 +99,7 @@ function moveNote (offsetY, isSharp, countStavesAbove, countStavesBelow) {
 
   $('#high-c').attr('transform', newTransform);
   $('#high-c-sharp').attr('transform', 'translate(0, ' + offsetY + ')');
-  $('#high-c-sharp').svg('toggleClass', 'invisible', !isSharp);
+  $('#high-c-sharp').css('opacity', isSharp ? 1 : 0);
 
   for (var i = 0; i < 8; i++) {
     $('#high-staff-' + (i + 1).toString()).css('display', 'none');
