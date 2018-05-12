@@ -122,7 +122,154 @@ function moveNote (offsetY, isSharp, countStavesAbove, countStavesBelow) {
   }
 }
 
+  // 21: 'A0',
+  // 22: 'A#0',
+  // 23: 'B0',
+  // 24: 'C1',
+  // 25: 'C#1',
+  // 26: 'D1',
+  // 27: 'D#1',
+  // 28: 'E1',
+  // 29: 'F1',
+  // 30: 'F#1',
+  // 31: 'G1',
+  // 32: 'G#1',
+  // 33: 'A1',
+  // 34: 'A#1',
+  // 35: 'B1',
+  // 36: 'C2',
+  // 37: 'C#2',
+  // 38: 'D2',
+  // 39: 'D#2',
+  // 40: 'E2',
+  // 41: 'F2',
+  // 42: 'F#2',
+  // 43: 'G2',
+  // 44: 'G#2',
+  // 45: 'A2',
+  // 46: 'A#2',
+  // 47: 'B2',
+  // 48: 'C3',
+  // 49: 'C#3',
+  // 50: 'D3',
+  // 51: 'D#3',
+  // 52: 'E3',
+  // 53: 'F3',
+  // 54: 'F#3',
+  // 55: 'G3',
+  // 56: 'G#3',
+  // 57: 'A3',
+  // 58: 'A#3',
+  // 59: 'B3',
+  // 60: 'C4',
+  // 61: 'C#4',
 var staffNotes = {
+  31: function () {
+    moveNote(189, false, 0, 10);
+  },
+  32: function () {
+    moveNote(189, true, 0, 10);
+  },
+  33: function () {
+    moveNote(181, false, 0, 10);
+  },
+  34: function () {
+    moveNote(181, true, 0, 9);
+  },
+  35: function () {
+    moveNote(173, false, 0, 9);
+  },
+  36: function () {
+    moveNote(165, false, 0, 8);
+  },
+  37: function () {
+    moveNote(165, true, 0, 8);
+  },
+  38: function () {
+    moveNote(158, false, 0, 8);
+  },
+  39: function () {
+    moveNote(158, true, 0, 8);
+  },
+  40: function () {
+    moveNote(150, false, 0, 7);
+  },
+  41: function () {
+    moveNote(143, false, 0, 7);
+  },
+  42: function () {
+    moveNote(143, true, 0, 7);
+  },
+
+  43: function () {
+    moveNote(135, false, 0, 6);
+  },
+  44: function () {
+    moveNote(135, true, 0, 6);
+  },
+  45: function () {
+    moveNote(127, false, 0, 6);
+  },
+  46: function () {
+    moveNote(127, true, 0, 6);
+  },
+  47: function () {
+    moveNote(119, false, 0, 5);
+  },
+  48: function () {
+    moveNote(112, false, -1, 5);
+  },
+  48: function () {
+    moveNote(103, false, 0, 4);
+  },
+  49: function () {
+    moveNote(103, true, 0, 4);
+  },
+  50: function () {
+    moveNote(97, false, 0, 4);
+  },
+  51: function () {
+    moveNote(97, true, 0, 4);
+  },
+  52: function () {
+    moveNote(89, false, 0, 3);
+  },
+  53: function () {
+    moveNote(82, false, 0, 3);
+  },
+  54: function () {
+    moveNote(82, true, 0, 3);
+  },
+  55: function () {
+    moveNote(74, false, 0, 2);
+  },
+  56: function () {
+    moveNote(74, true, 0, 2);
+  },
+  57: function () {
+    moveNote(66, false, 0, 2);
+  },
+  58: function () {
+    moveNote(66, true, 0, 2);
+  },
+  59: function () {
+    moveNote(58, false, 0, 1);
+  },
+  60: function () {
+    moveNote(51, false, 0, 1);
+  },
+  61: function () {
+    moveNote(51, true, 0, 1);
+  },
+  62: function () {
+    moveNote(44, false, 0, 0);
+  },
+  63: function () {
+    moveNote(44, false, 0, 0);
+  },
+  64: function () {
+    moveNote(37, false, 0, 0);
+  },
   65: function () {
     moveNote(28.5, false, 0, 0);
   },
@@ -420,6 +567,7 @@ function update () {
     octaveOffset = fetchOctaveOffset(ids);
     newBaseNote = calculateNoteWithoutOctave(baseNote, ids);
     newNote = newBaseNote + octaveOffset * 12;
+    console.log(newNote);
     stringNote = notes[newNote];
 
     if (staffNotes[newNote]) {
